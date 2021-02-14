@@ -10,7 +10,7 @@
 using namespace std;
 
 // myType = double, float
-
+ 
 template <typename myType>
 struct area
 {
