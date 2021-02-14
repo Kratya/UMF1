@@ -16,7 +16,7 @@ struct area
 {
 	vector<myType> knots, coefs, step0;
 	vector<int> counts, globalIndexKnots;
-};
+}; 
 
 template <class myType>
 class edge {
