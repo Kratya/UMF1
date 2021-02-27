@@ -143,10 +143,12 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="FirstCondition.txt" />
+    <Text Include="gX.txt" />
+    <Text Include="gY.txt" />
     <Text Include="SecondCondition.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Functions.h" />
+    <ClInclude Include="SLAUfunc.h" />
     <ClInclude Include="GridFunc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

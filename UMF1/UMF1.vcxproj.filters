@@ -26,12 +26,18 @@
     <Text Include="SecondCondition.txt">
       <Filter>Исходные файлы</Filter>
     </Text>
+    <Text Include="gX.txt">
+      <Filter>Исходные файлы</Filter>
+    </Text>
+    <Text Include="gY.txt">
+      <Filter>Исходные файлы</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GridFunc.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Functions.h">
+    <ClInclude Include="SLAUfunc.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
