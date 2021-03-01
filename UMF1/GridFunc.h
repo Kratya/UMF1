@@ -22,7 +22,7 @@ template <class mytype>
 class edge {
 public:
 	int startI, endI, step;
-	mytype val1, val2;
+	mytype val1, val2, normX, normY;
 	vector<int> getVertexes();
 };
 

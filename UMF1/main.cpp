@@ -8,6 +8,7 @@ int main()
 	grid.readY("gY.txt");
 	grid.initGrid();
 	grid.readFirst("FirstCondition.txt");
+	grid.readSecond("SecondCondition.txt");
 	SLAU<double> slae(grid);
 	slae.buildMatrix(grid);
 	slae.applyFirst(grid);
