@@ -12,6 +12,7 @@ int main()
 	SLAU<double> slae(grid);
 	slae.buildMatrix(grid);
 	slae.applyFirst(grid);
+	slae.applySecond(grid);
 	slae.iterZeid();
 	slae.printResult(grid, "out.txt");
 	return 0;

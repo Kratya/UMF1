@@ -166,7 +166,7 @@ template <typename mytype>
 void SLAU<mytype>::applySecond(Grid<mytype>& grid)
 {
 	int num, i, xsize = grid.Xsize(), j;
-	for (edge th : grid.getSecond())
+	for (edge<mytype> th : grid.getSecond())
 	{
 		auto vertx = th.getVertexes();
 		mytype h = 0;
@@ -175,7 +175,8 @@ void SLAU<mytype>::applySecond(Grid<mytype>& grid)
 			num = vertx[i];
 			int ii = num % xsize;
 			int jj = num / xsize;
-			f[num] = th.val1(grid.ox[ii], grid.oy[jj]);
+			f[num] = F(grid.ox[ii], grid.oy[jj]);
+			//f[num] = th.val1(grid.ox[ii], grid.oy[jj]);
 
 			if (th.normX > 0)
 			{
