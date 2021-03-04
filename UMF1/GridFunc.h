@@ -107,7 +107,7 @@ void Grid<mytype>::readSecond(string fl)
 {
 	ifstream fin(fl);
 	mytype nX, nY;
-	mytype tVal;
+	mytype tVal = 0;
 	vector<int> roadMap;
 	int n = 0, xI1, xI2, yI1, yI2;
 	fin >> n;
@@ -130,7 +130,7 @@ void Grid<mytype>::readSecond(string fl)
 		second.back().step = step;
 		second.back().normX = nX;
 		second.back().normY = nY;
-		fin >> tVal;
+		//fin >> tVal;
 		first.back().val1 = tVal;
 		for (int th : second.back().getVertexes())
 			boundary.push_back(th);

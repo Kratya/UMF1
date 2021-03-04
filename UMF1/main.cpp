@@ -11,8 +11,8 @@ int main()
 	grid.readSecond("SecondCondition.txt");
 	SLAU<double> slae(grid);
 	slae.buildMatrix(grid);
-	slae.applyFirst(grid);
 	slae.applySecond(grid);
+	slae.applyFirst(grid);
 	slae.iterZeid();
 	slae.printResult(grid, "out.txt");
 	return 0;
