@@ -115,6 +115,8 @@ void Grid<mytype>::readSecond(string fl)
 	for (int i = 0; i < n; ++i)
 	{
 		fin >> xI1 >> yI1 >> xI2 >> yI2 >> nX >> nY;
+		fin >> tVal;
+
 		int xGI1 = areaX.globalIndexKnots[xI1 - 1];
 		int yGI1 = areaY.globalIndexKnots[yI1 - 1];
 		int xGI2 = areaX.globalIndexKnots[xI2 - 1];
@@ -124,14 +126,15 @@ void Grid<mytype>::readSecond(string fl)
 		int step = 1;
 		if (xI1 == xI2)
 			step = rowsz;
+
 		second.emplace_back();
 		second.back().startI = startI;
 		second.back().endI = endI;
 		second.back().step = step;
 		second.back().normX = nX;
 		second.back().normY = nY;
-		//fin >> tVal;
-		first.back().val1 = tVal;
+		second.back().val1 = tVal;
+
 		for (int th : second.back().getVertexes())
 			boundary.push_back(th);
 	}

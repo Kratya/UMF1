@@ -158,6 +158,13 @@ void SLAU<mytype>::applyFirst(Grid<mytype>& grid)
 		{
 			int j = ith % m;
 			int i = ith / m;
+
+			diag[ith] = 1.0;
+			l1[ith] = 0.0;
+			r1[ith] = 0.0;
+			l2[ith] = 0.0;
+			r2[ith] = 0.0;
+
 			f[ith] = kr1(grid.ox[j], grid.oy[i], th.val1);
 		}
 }
@@ -175,8 +182,8 @@ void SLAU<mytype>::applySecond(Grid<mytype>& grid)
 			num = vertx[i];
 			int ii = num % xsize;
 			int jj = num / xsize;
-			f[num] = F(grid.ox[ii], grid.oy[jj]);
-			//f[num] = th.val1(grid.ox[ii], grid.oy[jj]);
+			//f[num] = F(grid.ox[ii], grid.oy[jj]);
+			f[num] = th.val1;
 
 			if (th.normX > 0)
 			{
